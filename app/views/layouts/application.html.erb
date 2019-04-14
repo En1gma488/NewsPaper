@@ -10,6 +10,35 @@
   </head>
 
   <body>
+  <nav class="navbar navbar-dark bg-light">
+    <ul class="nav nav-pills">
+      <li>
+        <a class="navbar-brand" style="margin-left: 20px">NewsPaper</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/my_profile">My Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+     
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a ><span class="glyphicon glyphicon-user"></span>
+        <% if current_user %>
+          <%= link_to 'Sign out', destroy_user_session_path, method: :delete%>
+        <% else %>
+          <%= link_to 'Sign Up', new_user_registration_path %>
+          <%= link_to 'Sign in', new_user_session_path %>
+        <% end %> 
+        </a>
+      </li>
+    </ul>
+  </nav>
     <%= yield %>
   </body>
 </html>
