@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :user_source
-  has_many :source, through: :user_source
+  has_many :articles_source, through: :user_source
 end

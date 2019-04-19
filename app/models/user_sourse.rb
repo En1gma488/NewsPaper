@@ -1,6 +1,6 @@
 class UserSourse < ApplicationRecord
 
 	belongs_to :user 
-	belongs_to :source
+	belongs_to :articles_source
 	
 end
