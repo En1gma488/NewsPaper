@@ -5,17 +5,17 @@ class ParserService
   default_params fielsd: "title, description, ulr, content"
   format :json
 
-  def self.top_headlines(country_name='us') 
+  def self.top_headlines(country_name='ar') 
     new(country_name).top_headlines
   end
 
-  def initialize(country_name='us')
+  def initialize(country_name='ar')
     @options = { query: { country: country_name, apiKey: API_KEY} }
   end
 
   def top_headlines 
-      response = self.class.get("/top-headlines", @options)
-      @pars_json = response.parsed_response
+    response = self.class.get("/top-headlines", @options)
+    @pars_json = response.parsed_response
   end
 
   def render_article

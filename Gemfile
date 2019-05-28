@@ -2,14 +2,9 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.1'
-<<<<<<< HEAD
-gem 'will_paginate', '~> 3.1.0'
-gem 'httparty', '~> 0.13.7'
-=======
 
-gem 'rubocop-performance'
-gem 'rubocop', require: false
->>>>>>> a58dfcf8fb8ce7983f32d479e298f714f578ed0f
+gem 'sidekiq'
+gem 'httparty', '~> 0.13.7'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.3.1'
 gem 'devise'
